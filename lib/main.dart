@@ -9,10 +9,12 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.teal.shade800,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
               CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/jordychang.jpg'),
@@ -22,8 +24,8 @@ class Myapp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Acme',
                   fontSize: 40.0,
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
               Text(
@@ -31,35 +33,36 @@ class Myapp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'SourceSansPro',
                   fontSize: 12.0,
-                  color: Colors.yellow,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.5,
                 ),
               ),
+              SizedBox(
+                  height: 20.0,
+                  width:120.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                )
+              ),
               Card(
-                color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
+                  child: ListTile(
+                    leading:Icon(
+                      Icons.phone,
+                      color: Colors.black,
+                      size: 30.0,
+                    ),
+                    title: Text(
+                      '+8615501163807',
+                      style: TextStyle(
                         color: Colors.black,
-                        size: 30.0,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 15.0,
                       ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '+8615501163807',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'SourceSansPro',
-                          fontSize: 15.0,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ),
@@ -68,26 +71,21 @@ class Myapp extends StatelessWidget {
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
+                  child:ListTile(
+                    leading:Icon(
+                      Icons.email,
+                      color: Colors.black,
+                      size: 30.0,
+                    ),
+                    title:Text(
+                      'Btbict.jordy@gmail.com',
+                      style: TextStyle(
                         color: Colors.black,
-                        size: 30.0,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 15.0,
                       ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        'Btbict.jordy@gmail.com',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'SourceSansPro',
-                          fontSize: 15.0,
-                        ),
-                      )
-                    ],
-                  ),
+                    ),
+                  )
                 ),
               ),
             ],
